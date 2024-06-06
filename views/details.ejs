@@ -1,0 +1,22 @@
+<html lang="en">
+    <%- include('./partials/header.ejs') %>
+<body>
+    <%- include('./partials/nav.ejs') %>
+
+    <div class="details content">
+        <h2><%= restaurant.name %></h2>
+        <div class="content">
+            <p><%= restaurant.address %></p>
+            <p><%= restaurant.telephone %></p>
+        </div>
+    </div>
+
+    <%- include('./partials/footer.ejs') %>
+</body>
+</html>
+            <!-- *************** N O T E ****************** -->
+<!-- 
+please note that this ejs page is intended to display each of restaurant-details
+seperately in detail to the browser. This works fine but there is a problem of continually loading 
+the page. If the page stop loading by force, you would see the results. Because of limited time,
+the intended functionality could not be implemented properly!!! -->

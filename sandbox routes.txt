@@ -1,0 +1,34 @@
+app.get('/add-restaurant', (req, res) => {
+    const restaurant = new Restaurant({
+        name: 'Cinnamon Grand Colombo',
+        address: 'Cinnamong garden, Colombo 7',
+        telephone: '0710899876'
+    });
+    restaurant.save()
+    .then((result) => {
+        res.send(result)
+    })
+    .catch((err) => {
+        console.log(err);
+    });
+});
+
+app.get('/all-restaurants', (req, res) => {
+    Restaurant.find()
+    .then((result) => {
+        res.send(result);
+    })
+    .catch((err) => {
+        console.log(err);
+    });
+});
+
+app.get('/single-restaurant', (req, res) => {
+    Restaurant.findById('666019764c1793141951d212')
+    .then((result) => {
+        res.send(result);
+    })
+    .catch((err) => {
+        console.log(err);
+    });
+});

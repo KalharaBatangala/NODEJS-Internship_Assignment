@@ -1,0 +1,35 @@
+<html lang="en">
+    <%- include('./partials/header.ejs') %>
+<body>
+    <%- include('./partials/nav.ejs') %>
+    <h1 >All Restaurants </h1>
+
+    <div class="restaurant-details">
+        
+        
+        <% if (restaurants.length > 0) { %>
+            <div class="restaurant-box">
+
+
+            
+
+            <% restaurants.forEach(restaurant => { %>
+
+                <a href="/restaurants/<%= restaurant._id %>">
+                <h3 class="title"><%= restaurant.name %></h3>
+                <p class="snippet"><%= restaurant.address %></p>
+                <p class="snippet"><%= restaurant.telephone %></p>
+            </a>  
+        </div>
+            <% }) %>
+
+            <% } else { %>
+                    <p>There are no restaurants currently available</p>
+                <% } %>
+
+    </div>
+
+
+    <%- include('./partials/footer.ejs') %>
+</body>
+</html>
