@@ -1,3 +1,2 @@
-Some of the functionalities does not work properly
-Due to the limited time, I have implemented some functions in a seperate file
-Sometimes the page is continually reloading and take some time to load the details
+This is a Restaurant management system developed using Nodejs.
+There is CRUD operations implemented in it
